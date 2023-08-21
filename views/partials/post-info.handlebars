@@ -1,0 +1,14 @@
+<article class="blog-post">
+  <header class="blog-post-header">
+    <h2 class="blog-post-title">
+      <a href="/post/{{id}}" class="post-link">{{title}}</a>
+    </h2>
+    <p class="blog-post-meta">
+      Posted By {{user.username}} on {{format_date created_at}} | 
+      {{comments.length}} {{format_plural "Comment" comments.length}}
+    </p>
+  </header>
+  <div class="blog-post-content">
+    {{post_text}}
+  </div>
+</article>

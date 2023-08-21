@@ -1,0 +1,20 @@
+{{#if posts.length}}
+<section class="user-posts">
+  <h2>Your Posts</h2>
+  <ul class="post-list">
+    {{#each posts as |post|}}
+      <li class="user-post">
+        {{ dashboard-post-info post}}
+      </li>
+    {{/each}}
+  </ul>
+</section>
+{{else}}
+<section class="no-posts">
+  <h3>You haven't posted yet</h3>
+</section>
+{{/if}}
+
+<div class="add-new-post">
+  <a href="/dashboard/new" class="btn-new-post">Add New Post</a>
+</div>
